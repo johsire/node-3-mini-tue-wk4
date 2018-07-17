@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 
 // endpoints
 app.get('/api/messages', messagesCtrl.getAllMessages);
+app.post('/api/message', messagesCtrl.createMessage);
 
 app.listen(SERVER_PORT, () => {
   console.log(`Listening on port: ${SERVER_PORT}`);
