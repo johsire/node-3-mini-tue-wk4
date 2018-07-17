@@ -24,6 +24,6 @@ module.exports = {
   },
 
   history: (req, res) => {
-    
+    res.status(200).send(req.session.history);
   }
 };
