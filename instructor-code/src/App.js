@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('/api/message').then(res => {
+    axios.get('/api/messages').then(res => {
       this.setState({ allMessages: res.data });
     });
   }
