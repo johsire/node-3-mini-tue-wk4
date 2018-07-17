@@ -16,6 +16,12 @@ class App extends Component {
     this.closeHistoryModal = this.closeHistoryModal.bind(this);
   }
 
+  componentDidMount() {
+    axios.get('/api/message').then(res => {
+      this.setState({ allMessages: res.data });
+    });
+  }
+
   saveUsername() {
     if (this.state.username) {
       this.setState({ messageInputDisabled: !this.state.messageInputDisabled });
