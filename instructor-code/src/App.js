@@ -22,6 +22,17 @@ class App extends Component {
     });
   }
 
+  createMessage() {
+    axios
+      .post('/api/messages', {
+        username: this.state.username,
+        message: this.state.message
+      })
+      .then(res => {
+        this.setState({ allMessages: res.data });
+      });
+  }
+
   saveUsername() {
     if (this.state.username) {
       this.setState({ messageInputDisabled: !this.state.messageInputDisabled });
