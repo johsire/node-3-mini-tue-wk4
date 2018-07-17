@@ -11,7 +11,7 @@ export default class HistoryModal extends Component {
   }
 
   componentDidMount() {
-    axios.get('.api/message/history').then(res => {
+    axios.get('.api/messages/history').then(res => {
       this.setState({ historyMessages: res.data });
     });
   }

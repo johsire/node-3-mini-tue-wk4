@@ -20,6 +20,7 @@ app.use(session({
 // endpoints
 app.get('/api/messages', messagesCtrl.getAllMessages);
 app.post('/api/messages', messagesCtrl.createMessage);
+app.get('/api/messages/histoy', messagesCtrl.history);
 
 app.listen(SERVER_PORT, () => {
   console.log(`Listening on port: ${SERVER_PORT}`);
